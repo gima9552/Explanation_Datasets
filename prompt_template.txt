@@ -1,5 +1,4 @@
 """
-
 Perform multi-class classification for an English sentence received as input according to the following categories:
 
 - **Causation**: Identifies and describes the relationship between a cause and its effect.
@@ -47,5 +46,4 @@ Perform multi-class classification for an English sentence received as input acc
 **Input Sentence**: {text}
 
 **Output**: Return the classification label.
-
 """
