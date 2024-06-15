@@ -1,0 +1,49 @@
+"""
+Perform multi-class classification for an English sentence received as input according to the following categories:
+
+- **Causation**: Identifies and describes the relationship between a cause and its effect.
+  - *Example Sentences*:
+    - "At the genetic level, mutations in the BRCA1 gene increase the risk of breast and ovarian cancer."
+    - "Beta-blockers work by blocking the effects of the hormone epinephrine, lowering heart rate and blood pressure."
+    - "Forcing mice to run using an electric shock likely introduces biases in the results due to stress induced in the animals."
+
+- **Mechanistic Causation**: Details the specific processes or mechanisms through which a cause leads to an effect.
+  - *Example Sentences*:
+    - "Because sorption processes tend to be exothermic, maintaining a constant temperature is crucial during biosorption."
+    - "Daemi and Barikani (2012) reported that absorption regions of O–H group in calcium alginate are narrower due to decreased hydrogen bonding."
+    - "It has been demonstrated that β-glucans must be administered orally because intravenously administered glucans are rapidly scavenged by blood granulocytes."
+
+- **Contrastive Explanation**: Compares scenarios to highlight why an outcome occurred in one instance and not in another.
+  - *Example Sentences*:
+    - "Intermediate water is more weakly bound to macromolecules than bound water, hence has higher mobility and is freezable below 0 °C."
+    - "In whole specimens, D. dentex can be differentiated from cogeneric species by its linear and high caniniform teeth."
+    - "Despite the manufacturer’s irradiance value for the Bluephase PowerCure, our measured value was around 2400 mW/cm2, possibly due to differences in measuring devices."
+
+- **Functional**: Describes how features or behaviors serve roles or purposes, often related to evolutionary biology or behavioral science.
+  - *Example Sentences*:
+    - "Formation of the heart involves precisely orchestrated molecular and morphogenetic events."
+    - "In vertebrates, the rightward looping of the linear heart tube is essential for proper orientation of the ventricles."
+    - "Owl's wing feathers have evolved to enable silent flight, providing these nocturnal birds with a stealthy hunting advantage."
+
+- **Correlation**: Describes relationships between variables without establishing direct causality.
+  - *Example Sentences*:
+    - "One potential explanation for SCC initiation may be the accumulation of oncogenic mutations."
+    - "An increase in eNOS phosphorylation could be explained by increased interaction between Akt1 and eNOS."
+    - "A meta-regression concluded that improvements in BMD are strongly associated with reduction in fracture risk."
+
+- **Pragmatic Approach**: Justifies actions based on practical considerations, emphasizing real-world applicability.
+  - *Example Sentences*:
+    - "Liquid formulations are most common in paediatrics due to their ease of administration."
+    - "Broad spectrum antibiotics are used because culture data may not identify the infecting bacteria at the time of operation."
+    - "Evidence of Nrf2 inhibition sensitizing SCCs to chemotherapy makes Nrf2 an attractive target for clinical trials."
+
+- **No Explanation**: The sentence does not provide an explanation.
+  - *Example Sentences*:
+    - "The great majority of mutations that are not neutral in effect are deleterious to a cell's survival."
+    - "Hashimoto et al. showed that 8-OHdG accumulates in rat kidney DNA with age."
+    - "It is closely related to the blesmols and is the only species in the genus Heterocephalus."
+
+**Input Sentence**: {text}
+
+**Output**: Return the classification label.
+"""

@@ -1,0 +1,68 @@
+"""
+Perform multi-class classification for an English sentence received as input according to the following categories:
+
+- **Causation**: Identifies and describes the relationship between a cause and its effect.
+  - *Example Sentences*:
+    - "At the genetic level, mutations in the BRCA1 gene increase the risk of breast and ovarian cancer."
+    - "Beta-blockers work by blocking the effects of the hormone epinephrine, lowering heart rate and blood pressure."
+    - "Forcing mice to run using an electric shock likely introduces biases in the results due to stress induced in the animals."
+    - "There will always be a concentration difference between hydrogels and the medium because the surrounding water can be defined as infinite in magnitude."
+    - "A deficiency of vitamin D in the body leads to weakened bones and the onset of osteoporosis."
+    - "Chronic smoking increases the risk of developing lung cancer due to the continuous exposure of lung tissues to carcinogens."
+    - "The incidence of sudden death is higher in men than women, largely because women are protected from coronary heart disease during the premenopausal years."
+
+- **Mechanistic Causation**: Details the specific processes or mechanisms through which a cause leads to an effect.
+  - *Example Sentences*:
+    - "Because sorption processes tend to be exothermic, maintaining a constant temperature is crucial during biosorption."
+    - "Daemi and Barikani (2012) reported that absorption regions of O–H group in calcium alginate are narrower due to decreased hydrogen bonding."
+    - "It has been demonstrated that β-glucans must be administered orally because intravenously administered glucans are rapidly scavenged by blood granulocytes."
+    - "Disruption of the Forkhead transcription factor Mfh1 causes hypoplasia of the fourth aortic arch artery in mice, resulting in absence of the transverse aortic arch37."
+    - "Excessive alcohol intake over time can cause liver inflammation and scarring, eventually leading to cirrhosis, where the liver's ability to function is compromised."
+
+- **Contrastive Explanation**: Compares scenarios to highlight why an outcome occurred in one instance and not in another.
+  - *Example Sentences*:
+    - "Intermediate water is more weakly bound to macromolecules than bound water, hence has higher mobility and is freezable below 0 °C."
+    - "In whole specimens, D. dentex can be differentiated from cogeneric species by its linear and high caniniform teeth."
+    - "Despite the manufacturer’s irradiance value for the Bluephase PowerCure, our measured value was around 2400 mW/cm2, possibly due to differences in measuring devices."
+    - "Untreated crude biosorbents usually have a lower sorption capacity for metal ions than, for example, chemically modified biosorbents, because their surface lacks suitable chemical functional groups."
+    - "Acylcarnitines present very high bioavailability compared to L-carnitine because they have a better ability to cross the blood–brain barrier compared to L-carnitine."
+
+- **Functional**: Describes how features or behaviors serve roles or purposes, often related to evolutionary biology or behavioral science.
+  - *Example Sentences*:
+    - "Formation of the heart involves precisely orchestrated molecular and morphogenetic events."
+    - "In vertebrates, the rightward looping of the linear heart tube is essential for proper orientation of the ventricles."
+    - "Owl's wing feathers have evolved to enable silent flight, providing these nocturnal birds with a stealthy hunting advantage."
+
+- **Correlation**: Describes relationships between variables without establishing direct causality.
+  - *Example Sentences*:
+    - "One potential explanation for SCC initiation may be the accumulation of oncogenic mutations."
+    - "An increase in eNOS phosphorylation could be explained by increased interaction between Akt1 and eNOS."
+    - "A meta-regression concluded that improvements in BMD are strongly associated with reduction in fracture risk."
+    - "For hormone-sensitive breast cancers, the use of tamoxifen is contraindicated during pregnancy because of its supposed association with fetal malformation."
+    - "According to Kim and colleagues, high amounts of sulfur and iron in their soils could explain the high abundance of Thiobacillus."
+
+- **Pragmatic Approach**: Justifies actions based on practical considerations, emphasizing real-world applicability.
+  - *Example Sentences*:
+    - "Liquid formulations are most common in paediatrics due to their ease of administration."
+    - "Broad spectrum antibiotics are used because culture data may not identify the infecting bacteria at the time of operation."
+    - "Evidence of Nrf2 inhibition sensitizing SCCs to chemotherapy makes Nrf2 an attractive target for clinical trials."
+    - "Early treatment of femoral neck fracture by surgery is fundamental in elderly patients, because it reduces the risk of mortality and disability."
+    - "The Langmuir model is the most commonly used one in practice, because it contains two useful and easily imaginable parameters (Qmax and KL), which are easy to understand because they reflect two important characteristics of the sorption system."
+
+- **No Explanation**: The sentence does not provide an explanation.
+  - *Example Sentences*:
+    - "The great majority of mutations that are not neutral in effect are deleterious to a cell's survival."
+    - "Hashimoto et al. showed that 8-OHdG accumulates in rat kidney DNA with age."
+    - "It is closely related to the blesmols and is the only species in the genus Heterocephalus."
+    - "Excessive quantities of barium oxide may lead to death."
+    - "Therapeutic approaches primarily aim to manage symptoms, reduce immune system activity, and maintain the body's ability to fight diseases."
+    - "Coeliac disease is an immune reaction to eating gluten, a protein found in wheat, barley, and rye."
+    - "Symptoms include severe diarrhea, abdominal pain, fatigue, and weight loss."
+    - "Abnormal B cells may be relatively large and some diseases include this in their names."
+    - "We have no explanation for why two-word systems are avoided."
+    - "In America, it is also likely to be pre-salted; in Britain this is not the case."
+
+**Input Sentence**: {text}
+
+**Output**: Return the classification label.
+"""

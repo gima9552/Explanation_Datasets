@@ -1,0 +1,22 @@
+"""
+Perform multi-class classification for an English sentence received as input according to the following categories:
+
+- **Causation**: Identifies and describes the relationship between a cause and its effect.
+
+- **Mechanistic Causation**: Details the specific processes or mechanisms through which a cause leads to an effect.
+
+- **Contrastive Explanation**: Compares scenarios to highlight why an outcome occurred in one instance and not in another.
+
+- **Functional**: Describes how features or behaviors serve roles or purposes, often related to evolutionary biology or behavioral science.
+
+- **Correlation**: Describes relationships between variables without establishing direct causality.
+
+- **Pragmatic Approach**: Justifies actions based on practical considerations, emphasizing real-world applicability.
+
+- **No Explanation**: The sentence does not provide an explanation.
+
+
+**Input Sentence**: {text}
+
+**Output**: Return the classification label.
+"""
