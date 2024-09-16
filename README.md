@@ -1,6 +1,6 @@
 # Contents of this repository
 
-This repository contains all the data used for finetuning the Cohere API Classifier models, testing all models mentioned in the paper, and the prompt used for GPT-4 and Llama 3 8B.
+This repository contains all the data for finetuning the BERT base / Cohere API / DeBERTa 3 Small classifier models, testing all models mentioned in the paper, and the prompt used for GPT-4 and Llama 3 8B.
 
 The manually annotated sentence seed is also freely available to use; it includes each sentence category, topic domain and consensus score.
 
@@ -16,9 +16,15 @@ The "executables" folder contains the python pipeline for GPT-4 and Llama 3 8B; 
     │   ├── expl_tune_binary.tsv               # Data for finetuning of a binary classifier.
     │   └── expl_tune_multiclass.tsv           # Data for finetuning a multiclass classifier.
     ├── results
+    │   ├── bert-base                         
+    |   |   ├── b_binary_results.txt             # Results from BERT Base binary classifier. 
+    │   |   └── b_multiclass_results.txt         # Results from BERT Base multiclass classifier.
     │   ├── cohere-llm                         
     |   |   ├── binary_results.tsv             # Results from Cohere binary classifier. 
     │   |   └── multiclass_results.tsv         # Results from Cohere multiclass classifier.
+    │   ├── deberta-v3-small                         
+    |   |   ├── dv3_binary_results.txt             # Results from DeBERTa v3 Small binary classifier. 
+    │   |   └── dv3_multiclass_results.txt         # Results from DeBERTa v3 Small multiclass classifier.
     │   ├── gpt-4                         
     |   |   ├── results_t0.txt                 # Results from GPT-4 with template t0.
     |   |   ├── results_t1.txt                 # Results from GPT-4 with template t1.
